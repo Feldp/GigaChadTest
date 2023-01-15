@@ -64,6 +64,18 @@
 
   <body class="bg-zinc-100">
     <main id="main" class="">
+      <div
+        id="topLink"
+        class="bg-zinc-800 text-white flex flex-row justify-center align-middle gap-2 p-1.5 transform duration-300 invisible"
+      >
+        <h3>Reach Your Full Potential With Other Aspiring GigaChads:</h3>
+        <a
+          class="text-blue-300 -mt-0.5"
+          href="https://discord.com/invite/9pNKaX3GXv"
+          target="_blank"
+          >Discord.gg/9pNKaX3GXv</a
+        >
+      </div>
       <div class="mx-auto lg:w-4/5">
         <button
           id="back"
@@ -904,6 +916,10 @@
       if (curr > 60) {
         finishTest();
       } else {
+        if (curr > 3) {
+          let tL = document.getElementById("topLink");
+          tL.classList.remove("invisible");
+        }
         const question = document.getElementById("question");
         const answers = document.getElementById("answers");
         const counter = document.getElementById("currentQ");
